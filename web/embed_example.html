@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Логотипы — плитки 1:1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f4f2;
+      color: #14161a;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 56px 24px 72px; }
+    h1 { font-size: clamp(24px, 3vw, 34px); margin: 0 0 6px; letter-spacing: -0.015em; }
+    .lede { margin: 0 0 36px; color: #5b6069; }
+
+    /* сетка квадратных плиток */
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .tile {
+      position: relative;
+      display: block;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 14px 30px -20px rgba(15, 20, 30, 0.45);
+      text-decoration: none;
+      color: inherit;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .tile:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -20px rgba(15, 20, 30, 0.5); }
+    .tile img, .tile video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .tile .label {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 12px 14px;
+      font-size: 13px; font-weight: 600;
+      background: linear-gradient(to top, rgba(255,255,255,.92), rgba(255,255,255,0));
+      color: #14161a;
+    }
+    .tile .badge {
+      position: absolute; top: 12px; left: 12px;
+      font-size: 11px; letter-spacing: .04em; text-transform: uppercase;
+      color: #6a7078; background: rgba(255,255,255,.85);
+      padding: 4px 8px; border-radius: 999px;
+    }
+    .note { margin-top: 28px; font-size: 13px; color: #7b818a; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Наши логотипы</h1>
+    <p class="lede">Квадратные плитки 1:1: два видео с процессом и два статичных знака.</p>
+
+    <div class="tiles">
+      <a class="tile" href="deer_process_web.mp4" aria-label="Процесс создания логотипа с оленем">
+        <video src="tiles/deer_tile.mp4" poster="tiles/deer_tile.jpg"
+               autoplay muted loop playsinline preload="metadata"></video>
+        <span class="badge">видео</span>
+        <span class="label">Олень — процесс</span>
+      </a>
+
+      <a class="tile" href="shark_process_web.mp4" aria-label="Процесс создания логотипа SHARK">
+        <video src="tiles/shark_tile.mp4" poster="tiles/shark_tile.jpg"
+               autoplay muted loop playsinline preload="metadata"></video>
+        <span class="badge">видео</span>
+        <span class="label">SHARK — процесс</span>
+      </a>
+
+      <a class="tile" href="tiles/deer_tile.png" aria-label="Логотип с оленем">
+        <img src="tiles/deer_tile.png" alt="Логотип с оленем" loading="lazy">
+        <span class="badge">логотип</span>
+        <span class="label">Олень</span>
+      </a>
+
+      <a class="tile" href="tiles/shark_tile.png" aria-label="Логотип SHARK">
+        <img src="tiles/shark_tile.png" alt="Логотип SHARK" loading="lazy">
+        <span class="badge">логотип</span>
+        <span class="label">SHARK</span>
+      </a>
+    </div>
+
+    <p class="note">
+      Видео-плитки: 720×720, H.264, без звука — автозапуск и цикл включены
+      (для мобильных обязательны <code>muted</code> и <code>playsinline</code>).
+      Статичные плитки: 1000×1000 PNG, есть версии с прозрачным фоном.
+    </p>
+  </div>
+</body>
+</html>
