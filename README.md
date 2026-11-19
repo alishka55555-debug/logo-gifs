@@ -1,9 +1,26 @@
 # Логотипы — GIF процесса и файлы для сайта
 
 Записи процесса создания двух логотипов: **олень** (в стиле Hydro Flask) и
-**SHARK** (вордмарк-акула). Водяные знаки убраны.
+**SHARK** (вордмарк-акула).
 
-## GIF процесса
+## Оригинальные ролики «студии» (без водяных знаков)
+
+Сгенерированы с нуля: свой векторный редактор, направляющие, отрисовка контура,
+заливка, выделение с узлом и финальный зум. Никаких чужих кадров — водяных знаков
+нет по определению.
+
+| Файл | Что это | Длительность |
+|---|---|---|
+| [`gif/deer_studio_2x.gif`](gif/deer_studio_2x.gif) | олень, ×2 | 10 с |
+| [`gif/shark_studio_2x.gif`](gif/shark_studio_2x.gif) | SHARK, ×2 | 10 с |
+| [`gif/deer_studio.gif`](gif/deer_studio.gif) | олень, реальная скорость | 20 с |
+| [`gif/shark_studio.gif`](gif/shark_studio.gif) | SHARK, реальная скорость | 20 с |
+| [`web/deer_studio_web.mp4`](web/deer_studio_web.mp4), [`web/shark_studio_web.mp4`](web/shark_studio_web.mp4) | видео 9:16, 720×1280, 24 к/с | 20 с |
+| [`tiles/deer_studio_tile.mp4`](tiles/deer_studio_tile.mp4), [`tiles/shark_studio_tile.mp4`](tiles/shark_studio_tile.mp4) | плитки 1:1 для сетки | 20 с |
+
+Сборка: `tools/make_process_video.py` (рендер) и `tools/build_studio.py` (MP4, GIF ×1/×2, плитки).
+
+## Ролики из видеоуроков (водяные знаки вычищены)
 
 | Файл | Что это | Длительность |
 |---|---|---|
